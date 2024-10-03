@@ -16,8 +16,6 @@ jobs:
             CC: gcc -m32
           - arch: x86_64
             CC: gcc
-          - arch: arm64
-            CC: aarch64-linux-gnu-gcc
     
     steps:
     - uses: actions/checkout@v2
