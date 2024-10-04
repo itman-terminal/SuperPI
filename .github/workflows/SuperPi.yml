@@ -18,14 +18,14 @@ jobs:
             CC: gcc
     
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     
     - name: Compile SuperPi
       run: |
         ${{ matrix.CC }} -O -funroll-loops -fomit-frame-pointer pi_fftcs.c fftsg_h.c -lm -o SuperPi
     
     - name: Upload Artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: SuperPi-${{ matrix.arch }}
         path: SuperPi
