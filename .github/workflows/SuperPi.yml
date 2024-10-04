@@ -12,10 +12,10 @@ jobs:
     strategy:
       matrix:
         include:
-          - arch: x86
-            CC: gcc -m32
           - arch: x86_64
             CC: gcc
+          - arch: x86
+            CC: gcc -m32
     
     steps:
     - uses: actions/checkout@v3
